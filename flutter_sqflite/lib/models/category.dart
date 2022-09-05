@@ -1,14 +1,13 @@
 class Category {
-  int id = 0;
-  String name = "";
-  String description = "";
+  int id;
+  String name;
+  String description;
 
-  categoryMap() {
-    var mapping = Map<String, dynamic>();
-    mapping['id'] = id;
-    mapping['name'] = name;
-    mapping['description'] = description;
+  //Category(){}
 
-    return mapping;
+  Category({required this.id, required this.name, required this.description});
+
+  Map<String, dynamic> toMap() {
+    return <String, dynamic>{"name": name, "description": description};
   }
 }
